@@ -1,6 +1,6 @@
 use Mix.Config
 
-{riak_port, ""} = Integer.parse(System.get_env("RIAK_PORT"))
+{riak_port, ""} = Integer.parse(System.get_env("RIAK_PORT") || "8985")
 
 config :pooler, pools:
   [
