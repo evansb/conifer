@@ -21,7 +21,14 @@ defmodule Api.Mixfile do
   # Type `mix help compile.app` for more information.
   def application do
     [mod: {Api, []},
-     applications: [:phoenix, :phoenix_pubsub, :cowboy, :logger, :gettext]]
+     applications: [
+      :phoenix,
+      :phoenix_pubsub,
+      :cowboy,
+      :logger,
+      :gettext,
+      :entity
+    ]]
   end
 
   # Specifies which paths to compile per environment.
@@ -35,6 +42,8 @@ defmodule Api.Mixfile do
     [{:phoenix, "~> 1.2.1"},
      {:phoenix_pubsub, "~> 1.0"},
      {:gettext, "~> 0.11"},
-     {:cowboy, "~> 1.0"}]
+     {:cowboy, "~> 1.0"},
+
+     {:entity, in_umbrella: true}]
   end
 end

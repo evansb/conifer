@@ -1,0 +1,2 @@
+defmodule Entity do
+end
