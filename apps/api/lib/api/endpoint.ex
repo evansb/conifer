@@ -4,7 +4,7 @@ defmodule Api.Endpoint do
   if code_reloading? do
     plug Phoenix.CodeReloader
   end
-
+  
   plug Plug.RequestId
   plug Plug.Logger
 
@@ -21,5 +21,6 @@ defmodule Api.Endpoint do
     key: "_api_key",
     signing_salt: "mAw4VkSW"
 
+  plug CORSPlug 
   plug Api.Router
 end
