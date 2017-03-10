@@ -6,6 +6,7 @@ defmodule Api do
 
     children = [
       supervisor(Api.Endpoint, []),
+      supervisor(Api.Presence, [])
     ]
 
     opts = [strategy: :one_for_one, name: Api.Supervisor]
